@@ -1,0 +1,229 @@
+body {
+  font-family: Helvetica;
+}
+
+.container {
+  width: 100%;
+}
+
+.container .list {
+  width: 738px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
+.item {
+  margin: 0 14.75px 35px 14.75px;
+  padding: 0 5.891px;
+  height: 448px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item .itemImage img{
+  width: 100%;
+}
+
+.item .itemInfo {
+  padding: 15px 5px 10px 5px;
+  text-align: center;
+}
+
+.item .itemTitle {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.item .itemDesc {
+  color: #7c7c7c;
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 10px;;
+}
+
+.item .itemPrice {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  padding-top: 9px;;
+}
+
+.item .itemPrice .desc {
+  font-weight: normal;
+}
+
+.item .itemRating {
+  padding: 7px 0;
+  position: relative;
+}
+
+.item .itemRating .ratingBg {
+  margin: auto;
+  height: 26px;
+  width: 108px;
+  position: relative;
+}
+
+.item .itemRating .ratingBg img {
+  margin-top: 7px;
+}
+
+.item .itemRating .ratingBg .rating {
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+
+.item .itemRating .ratingBg .score-0 {
+  width: 0%
+}
+
+.item .itemRating .ratingBg .score-1 {
+  width: 20%
+}
+
+.item .itemRating .ratingBg .score-2 {
+  width: 40%
+}
+
+.item .itemRating .ratingBg .score-3 {
+  width: 60%
+}
+
+.item .itemRating .ratingBg .score-4 {
+  width: 80%
+}
+
+.item .itemRating .ratingBg .score-5 {
+  width: 100%
+}
+
+.item .itemRating .ratingCount {
+  position: absolute;
+  right: 0;
+  bottom: 7px;
+  color: #7c7c7c;
+  font-size: 12.25px;
+}
+
+.item .itemCompare {
+  text-align: center;
+  padding-top: 7px;
+  display: flex;
+  justify-content: center;
+}
+
+.item .itemCompare .box {
+  margin-right: 3px;
+  align-self: flex-end;
+  display: inline-block;
+  height: 14px;
+  width: 13px;
+  background-image: url("/images/compare_checkbox_empty.png");
+  background-repeat: no-repeat;
+}
+
+.item .itemCompare .box.checked {
+  background-image: url("/images/compare_checkbox_full.png");
+}
+
+.item .itemCompare .box:hover {
+  cursor: pointer;
+}
+
+.item .itemCompare .info {
+  font-size: 13.132px;
+}
+
+.item .itemCompare .info:hover {
+  cursor: pointer;
+}
+
+.item .itemCompareMobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .list {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+
+  .item {
+    flex-direction: row;
+    height: auto;
+    padding: 27px 0 38px 0;
+    margin: 0 1% 10px 0;
+    border: 1px solid #2e5558;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+  }
+
+  .item .itemImage {
+    width: 35%;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .item .itemInfo {
+    padding: 15px 5px 10px 5px;
+    text-align: left;
+  }
+
+  .item .itemCompare {
+    justify-content: left;
+  }
+
+  .item .itemRating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item .itemRating .ratingBg {
+    margin: 0 3px 0 0;
+    height: 19px;
+  }
+
+  .item .itemRating .ratingBg img {
+    margin-top: 0;
+    margin-right: 3px;
+  }
+
+  .item .itemRating .ratingBg .rating {
+    height: 19px;
+  }
+
+  .item .itemRating .ratingCount {
+    position: static;
+  }
+
+  .item .itemCompare {
+    display: none;
+  }
+
+  .item .itemCompareMobile {
+    display: inline-block;
+  }
+
+  .item .itemCompareMobile .button {
+    margin-top: 7px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 14.5px;
+  }
+
+  .item .itemCompareMobile .button:hover {
+    cursor: pointer;
+  }
+
+  .item .itemCompareMobile .button.checked {
+    color: #ffffff;
+    background-color: #d7b691;
+    border-color: #d7b691;
+    text-decoration: underline;
+  }
+}

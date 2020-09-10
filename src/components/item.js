@@ -8,7 +8,7 @@ export function Item(props) {
 
     return <div className="item">
         <div className="itemImage">
-            <img src={product.image}></img>
+            <img src={product.image} alt={product.title}></img>
         </div>
         <div className="itemInfo">
             <div className="itemTitle">{product.title}</div>
